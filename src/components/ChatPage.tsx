@@ -23,7 +23,6 @@ export const ChatPage = () => {
     setIsLoading(true);
 
     try {
-      // Here you would integrate with OpenAI API
       const response = "This is a placeholder response. OpenAI integration needs to be implemented.";
       setMessages((prev) => [...prev, { role: "assistant", content: response }]);
     } catch (error) {

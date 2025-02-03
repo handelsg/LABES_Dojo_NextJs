@@ -34,14 +34,14 @@ export const ChatPage = () => {
   };
 
   return (
-    <div className="h-[80vh] flex flex-col">
-      <ScrollArea className="flex-1 p-4 space-y-4">
+    <div className="flex flex-col h-[calc(100vh-2rem)]">
+      <ScrollArea className="flex-1 p-4 mb-4">
         {messages.map((message, index) => (
           <div
             key={index}
             className={`flex ${
               message.role === "user" ? "justify-end" : "justify-start"
-            }`}
+            } mb-4`}
           >
             <div
               className={`max-w-[80%] p-3 rounded-lg ${
@@ -55,8 +55,8 @@ export const ChatPage = () => {
           </div>
         ))}
       </ScrollArea>
-      <div className="p-4 border-t">
-        <div className="flex gap-2">
+      <div className="p-4 border-t fixed bottom-0 left-0 right-0 bg-background">
+        <div className="flex gap-2 max-w-4xl mx-auto">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
